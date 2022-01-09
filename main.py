@@ -67,19 +67,7 @@ def main():
             except socket.herror:
                 table1 = "Unknown"
                 domains.append(table1)
-            # continue
-
-            # try:
-            #     host = socket.gethostbyaddr(report_host_name)[0]
-            #     nt_host.append(host)
-            #
-            # except socket.herror:
-            #     host = "Unknown"
-            #     nt_host.append(host)
-            #     continue
-            # table1 = "Unknown"
-            # domains.append(table1)
-
+      
 
         #Get info by ip
         response = DbIpCity.get(report_host_name, api_key='free')
@@ -139,9 +127,3 @@ for file_for_pars in glob.glob("*.nessus"):
     main()
 
 
-#get_os()
-
-
-
-
-#make dictionary
